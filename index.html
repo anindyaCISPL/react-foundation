@@ -7,11 +7,18 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/jsx">
        const app = document.getElementById('app');
+       //this is component
        function Header(){
-            return <h1>Develop. Preview. Ship.</h1>
+            return <h1>Develop. Preview. Ship.</h1> // this is jsx
+       }
+       function HomePage(){
+        return <div>
+            {/* Nesting the Header component */}
+            <Header />
+        </div>;
        }
        const root = ReactDOM.createRoot(app);
-       root.render(<Header />) // this is a JSX
+       root.render(<HomePage />) // this is a JSX
     </script>
 </body>
 
