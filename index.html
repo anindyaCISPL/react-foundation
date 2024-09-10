@@ -7,10 +7,11 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/jsx">
        const app = document.getElementById('app');
-       function header(){
+       function Header(){
+            return <h1>Develop. Preview. Ship.</h1>
        }
        const root = ReactDOM.createRoot(app);
-       root.render(<h1>Develope. Preview. Ship</h1>) // this is a JSX
+       root.render(<Header />) // this is a JSX
     </script>
 </body>
 
