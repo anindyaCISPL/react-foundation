@@ -15,7 +15,6 @@
        function HeaderObj(p){
             return <h1>{p.title}</h1>
        }
-
        //A template literal:
        function HeaderTemplateLiteral({title}){
             return <h1>{ `Cool ${title}` }</h1>
@@ -40,6 +39,12 @@
 
        function HomePage(){
         const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+        const [likes, setLikes] = React.useState(0);
+
+        function handleClick(){
+            //console.log('increment like count');
+            setLikes(likes+1);
+        }
 
         return <div>
             <ul>
@@ -47,6 +52,9 @@
                     <li key={name}>{name}</li>
                 ))}
             </ul>
+
+            <button onClick={handleClick}>Like {likes}</button>
+
             <Header title="React" />
             <Header title="Develop.Preview.Ship"/>
             <HeaderObj title="An object property" />
