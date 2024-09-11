@@ -8,13 +8,14 @@
     <script type="text/jsx">
        const app = document.getElementById('app');
        //this is component
-       function Header(){
+       function Header(p){
+            console.log(p);
             return <h1>Develop. Preview. Ship.</h1> // this is jsx
        }
        function HomePage(){
         return <div>
-            {/* Nesting the Header component */}
-            <Header />
+            <Header title="React" />
+            <Header title="Develop.Preview.Ship"/>
         </div>;
        }
        const root = ReactDOM.createRoot(app);
